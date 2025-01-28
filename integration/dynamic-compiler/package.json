@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "yarn clean && yarn ngc && yarn rollup",
+    "build": "node init && yarn clean && yarn ngc && yarn rollup",
     "clean": "rm -rf dist",
     "ngc": "ngc -p tsconfig.json",
     "rollup": "rollup -c rollup.config.mjs",
