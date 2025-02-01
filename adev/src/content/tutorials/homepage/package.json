@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "NG_BUILD_PARALLEL_TS=0 ng serve",
-    "build": "ng build",
+    "start": "node init && NG_BUILD_PARALLEL_TS=0 ng serve",
+    "build": "node init && ng build",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,

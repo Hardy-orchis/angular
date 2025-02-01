@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "ng build --configuration production",
+    "build": "node init && ng build --configuration production",
     "e2e": "ng e2e --port 0",
     "lint": "ng lint",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node init && ng serve",
     "pretest": "ng version && rm -fr ../tmp",
     "test": "ng test && yarn e2e --configuration=ci && yarn e2e --configuration=ci-production && yarn translated:test && yarn translated:legacy-xlf:test && yarn translated:legacy-xmb:test",
     "translate": "localize-translate --root \"dist/\" --source \"**/*\" --source-locale \"en-US\" --translations \"[src/locales/messages.de.json, src/locales/extra.de.json]\" [src/locales/messages.fr.json,src/locales/extra.fr.json] --outputPath \"../tmp/translations/{{LOCALE}}\"",
